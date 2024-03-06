@@ -23,36 +23,37 @@ use App\Http\Controllers\SupplierController;
 //    return view('frontend.index');
 // });
 
+
 // Multiple Webpage Routing in Front-End Landing Page(s).
 Route::get('/', [PageController::class, 'index'])->name('index');
 Route::get('/frontend.index', [PageController::class, 'index'])->name('index');
 Route::get('/frontend.services', [PageController::class, 'services'])->name('services');
 Route::get('/frontend.about', [PageController::class, 'about'])->name('about');
 
+
 // Dashboard Webpage Routing in User Page(s) while logged in.
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 // Customers Webpage Routing in User Page(s) while logged in.
 // Route::get('/customers', function () {
 //     return view('customers');
 // })->middleware(['auth', 'verified'])->name('customers');
 
+
 // Products Webpage Routing in User Page(s) while logged in.
 // Route::get('/products', function () {
 //     return view('products');
 // })->middleware(['auth', 'verified'])->name('products');
+
 
 // Suppliers Webpage Routing in User Page(s) while logged in.
 // Route::get('/suppliers', function () {
 //     return view('suppliers');
 // })->middleware(['auth', 'verified'])->name('suppliers');
 
-// Transactions Webpage Routing in User Page(s) while logged in.
-Route::get('/transactions', function () {
-    return view('transactions');
-})->middleware(['auth', 'verified'])->name('transactions');
 
 // User Profile Webpage while logged in.
 Route::middleware('auth')->group(function () {
@@ -61,6 +62,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+// CRUD routes for Products page
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products');
     Route::get('/products/create', [ProductController::class, 'create'])->name('product.create');
@@ -71,6 +74,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/products/{id}', [ProductController::class, 'productdelete'])->name('productdelete');
 });
 
+
+// CRUD routes for Customers page
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/customers', [CustomerController::class, 'index'])->name('customers');
     Route::get('/customers/create', [CustomerController::class, 'create'])->name('customer.create');
@@ -81,6 +86,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/customers/{id}', [CustomerController::class, 'customerdelete'])->name('customerdelete');
 });
 
+
+// CRUD routes For Suppliers page
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers');
     Route::get('/suppliers/create', [SupplierController::class, 'create'])->name('supplier.create');
