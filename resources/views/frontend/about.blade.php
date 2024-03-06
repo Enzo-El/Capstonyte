@@ -5,7 +5,7 @@
         <div class="container" id="Container1">
             <div class="parent" id="c1Parent1">
                 <h3>
-                    Simple Hearts, <br />
+                    Simple Minds, <br />
                     Effective Solutions
                 </h3>
 
