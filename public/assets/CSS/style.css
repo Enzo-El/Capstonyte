@@ -1,0 +1,526 @@
+* {
+    font-family: poppins;
+    color: rgb(209, 137, 137);
+}
+
+/*-- Container1 --*/
+#c1Background {
+    height: 500px;
+    background: rgb(43, 43, 58);
+    background: linear-gradient(
+        190deg,
+        rgb(13, 13, 59) 21%,
+        rgb(32, 64, 83) 45%,
+        rgb(32, 79, 97) 64%,
+        rgba(34, 134, 159, 1) 94%,
+        rgba(33, 149, 175, 1) 97%,
+        rgba(33, 149, 175, 1) 97%,
+        rgb(21, 207, 240) 99%
+    );
+}
+
+#Container1 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "element1 element2";
+}
+
+#Container1 h3 {
+    font-family: "Open Sans";
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#Container1 p {
+    font-family: Poppins;
+}
+
+#c1P2 {
+    width: 100%;
+    font-size: 18px;
+}
+  
+/* ------------------- */
+#c1Parent1 {
+    grid-area: element1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#schedule {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #c1d9f1;
+    color: #122a38;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+#schedule:hover {
+    transform: scale(1.1);
+}
+/* ------------------- */
+
+
+/* ------------------- */
+#c1Parent2 {
+    grid-area: element2;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    padding-right: 10px;
+}
+
+.Image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/Images/GuyUsingLaptop.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+/* ------------------- */
+/*-- End for Container1 --*/
+ 
+
+/*-- Container2 --*/
+#c2Background {
+    background-image: url('/assets/Images/background.png');
+    background-position: center;
+    height: auto;
+}
+
+#Container2 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "content1 content2";
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#c2Parent1 {
+    padding: 20px;
+}
+
+.c2Child1 {
+    background-image: url('/assets/Images/GuyUsingLaptop1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+#c2Parent2 {
+    padding: 30px;
+}
+
+#c2Child p {
+    color: black;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#c2Child h3 {
+    color: #254558;
+    font-weight: bold;
+    font-family: "Open Sans";
+    letter-spacing: 3px;
+}
+
+#joinUs {
+    color: #254558;
+    background-color: transparent;
+    border-color: #254558;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    width: 120px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: -5px;
+    transition: 0.3s;
+}
+
+#joinUs:hover {
+    background-color: #254558;
+    color: white;
+}
+/*-- End for Container2 --*/
+
+
+/*-- Container3 --*/
+#c3Background {
+    height: auto;
+    padding: 30px;
+    background-color: #f4f5f6;
+}
+
+#c3Background p {
+    color: black;
+}
+
+#c3Background h3 {
+    color: black;
+}
+
+#c3Background h1 {
+    color: black;
+}
+
+#c3Container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+#c3Container1 h1 {
+    color: #254558;
+    font-family: "Open Sans";
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#c3Container1 p {
+    font-family: Poppins;
+    color: #000;
+}
+/*-- End for Container3 --*/
+
+
+/*-- Carousel --*/
+#carouselParent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "elem1 elem2";
+    margin:90px 0;
+    gap: 10px;
+}
+
+.carouselChild {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carouselChild1 {
+    grid-area: elem1;
+}
+
+#icon {
+    width: 80%;
+}
+
+#carouselChild2 {
+    grid-area: elem2;
+    display: flex;
+    flex-direction: column;
+}
+
+#carouselChild2 h3 {
+    font-family: "Open Sans";
+    font-weight: 500;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #254558;
+}
+
+#carouselChild2 p {
+    color: #222f36;
+    font-size: 20px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(1);
+}
+/*-- End for Carousel --*/
+
+
+/*-- Media Queries of Front-End Pages --*/
+@media (max-width: 991px) {
+    #Container1 h3 {
+        font-size: 30px;
+    }
+
+    #Container1 p {
+        font-family: Poppins;
+    }
+    
+    #c1P2 {
+        font-size: 16px;
+    }
+  
+    #c2Child h3 {
+        font-size: 22px;
+    }
+
+    #c3Container2 h3 {
+        font-size: 25px;
+    }
+
+    #c3Container2 p {
+        display: none;
+    }
+
+    #c3Container2 p:hover {
+        display: block;
+    }
+
+    #carouselParent {
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas: "elem1 elem2";
+    }
+
+    #icon {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    #Container1 {
+        grid-template-columns: 2fr;
+        grid-template-areas: "element1 element2";
+    }
+
+    #c1Parent2 {
+        display: none;
+    }
+
+    #Container2 {
+        grid-template-columns: 2fr;
+        grid-template-areas: "content1 content2";
+    }
+    
+    #c2Parent1 {
+        display: none;
+    }
+
+    #c2Child p {
+        margin-bottom: 27px;
+    }
+
+    #c3Container1 p {
+        display: none;
+    }
+
+    #c3Container2 {
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6";
+        gap: 10px;
+    }
+
+    #c3Container2 h3 {
+        font-size: 21px;
+    }
+
+    #carouselParent {
+        grid-template-columns: 2fr;
+        grid-template-areas:
+            "elem2"
+            "elem1";
+        gap: 30px;
+    }
+
+    #icon {
+        width: 50%;
+    }
+
+    #carouselChild2 {
+        text-align: center;
+    }
+}
+  
+@media (max-width: 567px) {
+    #c3Container1 h1 {
+        font-size: 25px;
+    }
+
+    #carouselChild2 h3{
+        font-size: 30px;
+    }
+
+    #carouselChild2 p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) {
+    #c3Container1 h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 375px) {
+    #c3Container1 h1 {
+        font-size: 18px;
+    }
+
+    #c3Container2 h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 567px) {
+    #c1Background {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #c3Container1 h1 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #c3Container2 {
+        grid-template-columns: 2fr;
+        grid-template-areas:
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6";
+        gap: 20px;
+    }
+}
+/*-- End for Media Queries of Front-End Pages --*/
+
+
+/*-- LogIn Page --*/
+.logInPage {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background-image: url('/assets/Images/brgy.png');
+    background-position: center;
+    background-size: cover;
+    /*-- grid-template-columns: 2fr 3fR; --*/
+    /*-- grid-template-areas: "parent1LogIn parent2LogIn"; --*/
+}
+  
+/*-- #parent1LogIn {
+    grid-area: parent1LogIn;
+    padding: 150px;
+}
+
+ #parent2LogIn {
+    grid-area: parent2LogIn;
+    background-image: url('/assets/Images/brgy.png');
+    background-position: center;
+    background-size: cover;
+    padding: 100px;
+} --*/
+  
+#child1LogIn {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 75vh;
+}
+  
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(158, 158, 158);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.input-box input {
+    font-size: 20px;
+    border-style: none;
+    padding: 10px;
+    width: 70%;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-box i {
+    color: #254558;
+    font-size: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+  
+.response {
+    font-size: 40px;  
+    text-align: left;
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: -20px;
+    padding-bottom: 0;
+    padding-left: 10px;
+    color: #eb4a4a;
+}
+  
+#logInPage {
+    width: 50%;
+    background-color: #5c5e4fd7;
+    color: #183e53;
+    align-items: center;
+    border-style: none;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#logInPage:hover {
+    background-color: #9ba543;
+}
+  
+#child2LogIn {
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*-- End for LogIn Page --*/
+
+
+
+@media (max-width: 802px) {
+    .logInPage {
+        grid-template-columns: 2fr;
+    }
+  
+    #parent1LogIn {
+        padding: 80px;
+    }
+  
+    #parent2LogIn {
+        display: none;
+    }
+}

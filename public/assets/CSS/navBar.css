@@ -1,0 +1,32 @@
+@font-face {
+    font-family: avenir;
+    src: url(/Fonts/nunito/Nunito-Regular.ttf);
+}
+
+.navbar{
+    background-color: #4b7996 ;
+}
+
+#navElement1{
+    gap: 10px;
+    font-size: 20px;
+}
+
+#navElement2{
+    gap: 10px;
+}
+
+#login, #register{
+    color: white;
+    transition: 0.3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #07282c;
+}
+
+#login:hover, #register:hover{
+    background-color: #dff32d;
+    color: black;
+}
