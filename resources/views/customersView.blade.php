@@ -10,37 +10,36 @@
             <div role="main"> <!-- class="col-md-9 ml-sm-auto col-lg-10 px-4" -->
                 <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">
-                        Update your Products here:
+                        The Current Customers is:
                     </h1>
 
                     <div class="card">
 
                         <div class="card-header">
-                            <h2>Edit Product {{ $productUpdate->product_name }}</h2>
+                            <h2>The Customer is {{ $customerUpdate->customer_name }}</h2>
                         </div>
 
                         <div class="card-body">
-                            <!-- Update Product Form -->
-                            <form action="{{ route('productupdate', [$productUpdate->id]) }}" method="POST">
+                            <!-- View Customer Form -->
+                            <form action="" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
-                                    <label for="product_name">Product Name:</label>
-                                    <input type="text" class="form-control" name="product_name" value="{{ $productUpdate->product_name }}" required>
+                                    <label for="customer_name">Customer Name:</label>
+                                    <input type="text" class="form-control" name="customer_name" value="{{ $customerUpdate->customer_name }}" disabled required />
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="quantity">Quantity:</label>
-                                    <input type="number" class="form-control" id="quantity" name="quantity" value="{{ $productUpdate->quantity }}" required>
+                                    <label for="address">Address:</label>
+                                    <input type="text" class="form-control" id="address" name="address" value="{{ $customerUpdate->address }}" disabled required />
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="price">Price:</label>
-                                    <input type="number" class="form-control" id="price" name="price" value="{{ $productUpdate->price }}" required>
+                                    <label for="contact">Sales:</label>
+                                    <input type="number" class="form-control" id="contact" name="contact" value="{{ $contactUpdate->contact }}" disabled required />
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Update</button>
-                                <a href="{{ route('products') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('customers') }}" type="button" class="btn btn-secondary">Cancel</a>
                             </form>
                         </div>
                     </div>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +34,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Customers Webpage Routing in User Page(s) while logged in.
-Route::get('/customers', function () {
-    return view('customers');
-})->middleware(['auth', 'verified'])->name('customers');
+// Route::get('/customers', function () {
+//     return view('customers');
+// })->middleware(['auth', 'verified'])->name('customers');
 
 // Products Webpage Routing in User Page(s) while logged in.
 // Route::get('/products', function () {
@@ -69,10 +70,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/products/{id}', [ProductController::class, 'productdelete'])->name('productdelete');
 });
 
-// Route::controller(ProductController::class)->group(function() {
-//     Route::get('products', 'products')->name('product.index');
-//     Route::get('create', 'create')->name('product.create');
-//     Route::post('store', 'store')->name('product.store');
-// })->middleware(['auth', 'verified'])->name('products');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/customers', [CustomerController::class, 'index'])->name('customers');
+    Route::get('/customers/create', [CustomerController::class, 'create'])->name('customer.create');
+    Route::post('/customers/store', [CustomerController::class, 'store'])->name('customer.store');
+    Route::get('customersView/{id}', [CustomerController::class, 'customersView'])->name('customersView');
+    Route::get('customerupdateview/{id}', [CustomerController::class, 'customerupdateview'])->name('customerupdateview');
+    Route::put('customerupdateview/{id}', [CustomerController::class, 'customerupdate'])->name('customerupdate');
+    Route::get('/customers/{id}', [CustomerController::class, 'customerdelete'])->name('customerdelete');
+});
+
+
 
 require __DIR__.'/auth.php';

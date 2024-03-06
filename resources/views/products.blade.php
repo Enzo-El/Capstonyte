@@ -73,54 +73,6 @@
                 @endif
             </div>
 
-            {{-- <!-- View Product Modal -->
-            <div class="modal fade" id="viewProductModal" tabindex="-1" role="dialog" aria-labelledby="viewProductModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="viewProductModalLabel">Add Product</h5>
-
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-
-                        <div class="modal-body">
-                            <!-- View Product Form -->
-                            <form action="{{ route('product.store') }}" method="POST">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="product_name">Product Name:</label>
-                                    <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Name of Product" required />
-                                    @error('product_name')
-                                        <p class="text-danger">{{$message}}</p>
-                                    @enderror
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="quantity">Quantity:</label>
-                                    <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Quantity" required />
-                                    @error('quantity')
-                                    <p class="text-danger">{{$message}}</p>
-                                    @enderror
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="price">Price:</label>
-                                    <input type="number" class="form-control" id="price" name="price" placeholder="Price" required />
-                                    @error('price')
-                                    <p class="text-danger">{{$message}}</p>
-                                    @enderror
-                                </div>
-
-                                <button type="submit" class="btn btn-primary" name="addProduct">Done</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
             <!-- Add Product Modal -->
             <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
