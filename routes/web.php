@@ -5,6 +5,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,9 +45,9 @@ Route::get('/dashboard', function () {
 // })->middleware(['auth', 'verified'])->name('products');
 
 // Suppliers Webpage Routing in User Page(s) while logged in.
-Route::get('/suppliers', function () {
-    return view('suppliers');
-})->middleware(['auth', 'verified'])->name('suppliers');
+// Route::get('/suppliers', function () {
+//     return view('suppliers');
+// })->middleware(['auth', 'verified'])->name('suppliers');
 
 // Transactions Webpage Routing in User Page(s) while logged in.
 Route::get('/transactions', function () {
@@ -80,6 +81,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/customers/{id}', [CustomerController::class, 'customerdelete'])->name('customerdelete');
 });
 
-
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/suppliers', [SupplierController::class, 'index'])->name('suppliers');
+    Route::get('/suppliers/create', [SupplierController::class, 'create'])->name('supplier.create');
+    Route::post('/suppliers/store', [SupplierController::class, 'store'])->name('supplier.store');
+    Route::get('suppliersView/{id}', [SupplierController::class, 'supplierView'])->name('suppliersView');
+    Route::get('supplierupdateview/{id}', [SupplierController::class, 'supplierupdateview'])->name('supplierupdateview');
+    Route::put('supplierupdateview/{id}', [SupplierController::class, 'supplierupdate'])->name('supplierupdate');
+    Route::get('/suppliers/{id}', [SupplierController::class, 'supplierdelete'])->name('supplierdelete');
+});
 
 require __DIR__.'/auth.php';

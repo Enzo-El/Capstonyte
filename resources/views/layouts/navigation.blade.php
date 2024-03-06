@@ -15,7 +15,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('User Guide') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('customers')" :active="request()->routeIs('customers')">
@@ -28,10 +28,6 @@
 
                     <x-nav-link :href="route('suppliers')" :active="request()->routeIs('suppliers')">
                         {{ __('Suppliers List') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('transactions')" :active="request()->routeIs('transactions')">
-                        {{ __('Transactions List') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -86,7 +82,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('User Guide') }}
             </x-responsive-nav-link>
 
             <x-responsive-nav-link :href="route('customers')" :active="request()->routeIs('customers')">
@@ -99,10 +95,6 @@
 
             <x-responsive-nav-link :href="route('suppliers')" :active="request()->routeIs('suppliers')">
                 {{ __('Suppliers List') }}
-            </x-responsive-nav-link>
-
-            <x-responsive-nav-link :href="route('transactions')" :active="request()->routeIs('transactions')">
-                {{ __('Transactions List') }}
             </x-responsive-nav-link>
         </div>
 
