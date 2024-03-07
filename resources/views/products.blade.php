@@ -130,7 +130,7 @@
                     var printContents = document.getElementById('productTable').outerHTML;
                     var originalContents = document.body.innerHTML;
                     
-                    document.body.innerHTML = '<h2 class="text-center">List of Customers</h2><p class="text-center">As of ' + new Date().toLocaleDateString() + '</p><br>' + printContents;
+                    document.body.innerHTML = '<h2 class="text-center">List of Products</h2><p class="text-center">As of ' + new Date().toLocaleDateString() + '</p><br>' + printContents;
         
                     window.print();
         
