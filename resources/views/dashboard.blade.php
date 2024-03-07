@@ -48,9 +48,9 @@
                 </div>
 
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <p class="h5"> <b>Product Lists</b> </p>
+                    <p class="h5"> <b>Supplier Lists</b> </p>
                     <p class="h5">
-                        This is where you may add, edit, view and delete your products list or records.
+                        This is where you may add, edit, view and delete your supplier list or records.
                     </p>
                 </div>
             </div>
