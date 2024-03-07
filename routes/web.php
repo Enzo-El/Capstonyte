@@ -80,7 +80,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/customers', [CustomerController::class, 'index'])->name('customers');
     Route::get('/customers/create', [CustomerController::class, 'create'])->name('customer.create');
     Route::post('/customers/store', [CustomerController::class, 'store'])->name('customer.store');
-    Route::get('customersView/{id}', [CustomerController::class, 'customersView'])->name('customersView');
+    Route::get('customersView/{id}', [CustomerController::class, 'customerView'])->name('customersView');
     Route::get('customerupdateview/{id}', [CustomerController::class, 'customerupdateview'])->name('customerupdateview');
     Route::put('customerupdateview/{id}', [CustomerController::class, 'customerupdate'])->name('customerupdate');
     Route::get('/customers/{id}', [CustomerController::class, 'customerdelete'])->name('customerdelete');

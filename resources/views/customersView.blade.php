@@ -36,10 +36,10 @@
 
                                 <div class="form-group">
                                     <label for="contact">Sales:</label>
-                                    <input type="number" class="form-control" id="contact" name="contact" value="{{ $contactUpdate->contact }}" disabled required />
+                                    <input type="number" class="form-control" id="contact" name="contact" value="{{ $customerUpdate->contact }}" disabled required />
                                 </div>
 
-                                <a href="{{ route('customers') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('customers') }}" type="button" class="btn btn-secondary" style="color:black">Cancel</a>
                             </form>
                         </div>
                     </div>

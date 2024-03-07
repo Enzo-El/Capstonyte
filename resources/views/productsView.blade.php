@@ -39,7 +39,7 @@
                                     <input type="number" class="form-control" id="price" name="price" value="{{ $productUpdate->price }}" disabled required />
                                 </div>
 
-                                <a href="{{ route('products') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('products') }}" type="button" class="btn btn-secondary" style="color:black">Cancel</a>
                             </form>
                         </div>
                     </div>

@@ -39,8 +39,8 @@
                                     <input type="contact" class="form-control" id="contact" name="contact" value="{{ $customerUpdate->contact }}" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Update</button>
-                                <a href="{{ route('customers') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-primary" style="color:black">Update</button>
+                                <a href="{{ route('customers') }}" type="button" class="btn btn-secondary" style="color:black">Cancel</a>
                             </form>
                         </div>
                     </div>

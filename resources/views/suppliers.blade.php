@@ -28,7 +28,7 @@
                     <!-- Sort and Print Buttons -->
                     <div class="col-md-6 text-right">
                         <!-- Sort Button -->
-                        <button class="btn btn-secondary" data-toggle="modal" data-target="#sortModal">Sort</button>
+                        {{-- <button class="btn btn-secondary" data-toggle="modal" data-target="#sortModal">Sort</button> --}}
                     
                         <!-- Print Button -->
                         <button class="btn btn-success" id="printButton">Print</button>
@@ -62,9 +62,9 @@
                                 <td>{{$supplier->ingredient}}</td>
                                 <td>{{$supplier->quantity}}</td>
                                 <td>
-                                    <a href="{{url('suppliersView/'.$supplier->id.'')}}" type="button" class="btn btn-primary btn-sm">View</a>
-                                    <a href="{{url('supplierupdateview/'.$supplier->id.'')}}" type="button" class="btn btn-secondary btn-sm">Edit</a>
-                                    <a href="{{ route('supplierdelete', [$supplier->id]) }}" type="button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to Delete this Supplier?')" >Delete</a>
+                                    <a href="{{url('suppliersView/'.$supplier->id.'')}}" type="button" class="btn btn-primary btn-sm" style="color:black">View</a>
+                                    <a href="{{url('supplierupdateview/'.$supplier->id.'')}}" type="button" class="btn btn-secondary btn-sm" style="color:black">Edit</a>
+                                    <a href="{{ route('supplierdelete', [$supplier->id]) }}" type="button" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to Delete this Supplier?')" style="color:black">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -113,8 +113,8 @@
                                     @enderror
                                 </div>
 
-                                <button type="submit" class="btn btn-primary" name="addSupplier">Done</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary" name="addSupplier" style="color:black">Done</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="color:black">Cancel</button>
                             </form>
                         </div>
                     </div>
@@ -122,5 +122,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+                // Print Button
+                $('#printButton').click(function () {
+                    var printContents = document.getElementById('productTable').outerHTML;
+                    var originalContents = document.body.innerHTML;
+                    
+                    document.body.innerHTML = '<h2 class="text-center">List of Customers</h2><p class="text-center">As of ' + new Date().toLocaleDateString() + '</p><br>' + printContents;
+        
+                    window.print();
+        
+                    document.body.innerHTML = originalContents;
+                    location.reload();
+                });
+            });
+    </script>
 
 </x-app-layout>

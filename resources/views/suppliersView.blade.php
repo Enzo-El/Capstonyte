@@ -39,7 +39,7 @@
                                     <input type="number" class="form-control" id="quantity" name="quantity" value="{{ $supplierUpdate->quantity }}" disabled required />
                                 </div>
 
-                                <a href="{{ route('suppliers') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('suppliers') }}" type="button" class="btn btn-secondary" style="color:black">Cancel</a>
                             </form>
                         </div>
                     </div>

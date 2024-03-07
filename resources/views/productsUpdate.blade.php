@@ -39,8 +39,8 @@
                                     <input type="number" class="form-control" id="price" name="price" value="{{ $productUpdate->price }}" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Update</button>
-                                <a href="{{ route('products') }}" type="button" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" class="btn btn-primary" style="color:black">Update</button>
+                                <a href="{{ route('products') }}" type="button" class="btn btn-secondary" style="color:black">Cancel</a>
                             </form>
                         </div>
                     </div>
